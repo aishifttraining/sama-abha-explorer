@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A bilingual visitor guide for discovering Abha, Saudi Arabia.">
+  <title>Abha Explorer | دليل أبها</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#discover" data-i18n="skip">Skip to places</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Abha Explorer home" data-i18n-aria="homeAria">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>Abha</strong><em data-i18n="brandSubtitle">explorer</em></span>
+      </a>
+      <nav class="header-actions" aria-label="Site preferences" data-i18n-aria="preferencesAria">
+        <button class="icon-toggle language-toggle" id="languageToggle" type="button" aria-label="Switch language to Arabic">
+          <span aria-hidden="true">ع</span><span class="toggle-label">العربية</span>
+        </button>
+        <button class="icon-toggle theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3.2v2.1M12 18.7v2.1M20.8 12h-2.1M5.3 12H3.2M18.2 5.8l-1.5 1.5M7.3 16.7l-1.5 1.5M18.2 18.2l-1.5-1.5M7.3 7.3 5.8 5.8M16.3 12a4.3 4.3 0 1 1-8.6 0 4.3 4.3 0 0 1 8.6 0Z"/></svg>
+          <span class="toggle-label" data-i18n="themeLight">Light</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-aurora hero-aurora-one" aria-hidden="true"></div>
+      <div class="hero-aurora hero-aurora-two" aria-hidden="true"></div>
+      <div class="hero-landscape" aria-hidden="true">
+        <svg viewBox="0 0 1440 480" preserveAspectRatio="none" role="presentation">
+          <path class="mountain-back" d="M0 318 128 250 237 290 395 185 574 286 729 203 910 300 1116 174 1298 282 1440 220V480H0Z"/>
+          <path class="mountain-front" d="m0 359 164-141 100 94 142-139 167 179 122-94 154 128 140-200 160 180 154-122 146 125V480H0Z"/>
+          <path class="mist" d="M0 345c177-55 312 39 491-7s264-5 401 22 268-77 548-10v70c-241-49-359 60-579 15s-317 43-489 14S105 453 0 431Z"/>
+        </svg>
+      </div>
+      <div class="shell hero-content">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="eyebrow">Saudi Arabia’s highland escape</span></p>
+        <h1 id="heroTitle" data-i18n="heroTitle">Find your way to the clouds.</h1>
+        <p class="hero-copy" data-i18n="heroCopy">Discover misty mountain walks, storied villages, welcoming flavors, and unforgettable evenings in Abha.</p>
+        <div class="hero-actions">
+          <button class="button button-primary" id="planDayButton" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 3v3M16 3v3M4.5 9h15M6 5h12a1.5 1.5 0 0 1 1.5 1.5v12A1.5 1.5 0 0 1 18 20H6a1.5 1.5 0 0 1-1.5-1.5v-12A1.5 1.5 0 0 1 6 5Zm3.5 8h4m-2-2v4"/></svg>
+            <span data-i18n="planDay">Plan my day</span>
+          </button>
+          <a class="text-link" href="#discover"><span data-i18n="explorePlaces">Explore places</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <div class="hero-note"><span aria-hidden="true">⌁</span><span data-i18n="heroNote">Eight local experiences, one wonderful day.</span></div>
+      </div>
+    </section>
+
+    <section class="discovery-section" id="discover" aria-labelledby="discoverTitle">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow eyebrow-dark"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="discoverEyebrow">Choose your Abha</span></p>
+            <h2 id="discoverTitle" data-i18n="discoverTitle">A place for every kind of day.</h2>
+          </div>
+          <p class="section-intro" data-i18n="discoverIntro">Search, filter, or choose a month to find the moments that suit your trip.</p>
+        </div>
+
+        <div class="explorer-panel">
+          <div class="search-row">
+            <label class="search-field" for="placeSearch">
+              <span class="sr-only" data-i18n="searchLabel">Search places</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="5.8"/><path d="m15.2 15.2 4.3 4.3"/></svg>
+              <input id="placeSearch" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search places">
+            </label>
+            <label class="month-field" for="monthPicker">
+              <span class="field-label" data-i18n="monthPickerLabel">Best month</span>
+              <select id="monthPicker" aria-label="Filter by best month to visit"></select>
+            </label>
+          </div>
+          <div class="filter-row" aria-label="Place categories" data-i18n-aria="categoriesAria" role="group" id="categoryFilters"></div>
+        </div>
+
+        <div class="results-bar" aria-live="polite">
+          <p id="resultsText"></p>
+          <button class="clear-button" id="clearFilters" type="button" hidden data-i18n="clearFilters">Clear filters</button>
+        </div>
+        <div class="places-grid" id="placesGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-art" aria-hidden="true">⌁</div>
+          <h3 data-i18n="emptyTitle">No matches just yet</h3>
+          <p data-i18n="emptyCopy">Try another name, category, or month to discover more of Abha.</p>
+          <button class="button button-secondary" type="button" id="emptyReset" data-i18n="showAll">Show all places</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>Abha</strong><em data-i18n="brandSubtitle">explorer</em></span>
+      </a>
+      <p data-i18n="footerCopy">A small guide to the highlands of Asir.</p>
+      <a href="#top" class="back-top" data-i18n="backTop">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="detailsModal" hidden>
+    <section class="modal place-modal" role="dialog" aria-modal="true" aria-labelledby="detailsTitle" tabindex="-1">
+      <button class="modal-close" id="detailsClose" type="button" data-i18n-aria="closeAria">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg><span class="sr-only" data-i18n="close">Close</span>
+      </button>
+      <div id="detailsContent"></div>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="itineraryModal" hidden>
+    <section class="modal itinerary-modal" role="dialog" aria-modal="true" aria-labelledby="itineraryTitle" tabindex="-1">
+      <button class="modal-close" id="itineraryClose" type="button" data-i18n-aria="closeAria">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg><span class="sr-only" data-i18n="close">Close</span>
+      </button>
+      <div class="itinerary-heading">
+        <p class="eyebrow eyebrow-dark"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="itineraryEyebrow">One easy Abha day</span></p>
+        <h2 id="itineraryTitle" data-i18n="itineraryTitle">Your day, beautifully paced.</h2>
+        <p data-i18n="itineraryCopy">A gentle route through the places in this guide—mountains, local flavor, and an evening to remember.</p>
+      </div>
+      <div class="itinerary-grid" id="itineraryGrid"></div>
+    </section>
+  </div>
+
+  <script src="sample-data/data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
